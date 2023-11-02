@@ -4,12 +4,12 @@ AND OVER 80 BLOCKS \
 AND SPRINTING \
 AND FLYING \
 AND CRAPPY LIGHTING \
-AND TONS O FUN!!! \
-#
+AND TONS O FUN!!! 
 
 
 changelog:  \
   added red sand. \
   added colored glass. \
   removed herobrine. \
-#
+HAVE FUN!
+(and lots of it, lots  and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots of fun!)
