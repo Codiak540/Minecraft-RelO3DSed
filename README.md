@@ -1,15 +1,4 @@
-# Minecraft-RelO3DSed
-Minecraft brought to the ORIGINAL 3DS with FULL 3D! \
-AND OVER 80 BLOCKS \
-AND SPRINTING \
-AND FLYING \
-AND CRAPPY LIGHTING \
-AND TONS O FUN!!! 
-
-
-changelog:  \
-  added red sand. \
-  added colored glass. \
-  removed herobrine. \
-HAVE FUN!
-(and lots of it, lots  and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots of fun!)
+# Minecraft-3DS-clone
+MC Clone for the Nintendo 3DS, being built on top of craftus.
+Original software by BasDev, Improved upon by ObiWanKenobi540
+Craftus: https://github.com/RSDuck/craftus_reloaded
