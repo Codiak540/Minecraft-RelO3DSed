@@ -7,7 +7,7 @@ AND CRAPPY LIGHTING
 AND TONS O FUN!!!
 
 
-changelog:
-  added red sand.
-  added colored glass.
-  removed herobrine.
+changelog: \n
+  added red sand. \n
+  added colored glass. \n
+  removed herobrine. \n
