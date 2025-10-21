@@ -1,6 +1,7 @@
 #include <entity/Player.h>
-
 #include <misc/Collision.h>
+#include <gui/DebugUI.h>
+
 void PlayerInv1(Player* player){
 		int l = 0;
 		player->inventory[l++] = (ItemStack){Block_Stone, 0, 1};
@@ -57,10 +58,6 @@ void PlayerInv1(Player* player){
 		//snow
 		//clay
 }
-
-
-
-
 
 
 void PlayerInv2(Player* player){
@@ -137,15 +134,7 @@ void PlayerInv2(Player* player){
 		player->inventory[l++] = (ItemStack){Block_Air, 0, 0};
 		player->inventory[l++] = (ItemStack){Block_Air, 0, 0};
 		player->inventory[l++] = (ItemStack){Block_Air, 0, 0};
-		}
-
-
-
-
-
-
-
-
+}
 
 void Player_Init(Player* player, World* world) {
 	player->position = f3_new(0.f, 0.f, 0.f);
@@ -259,12 +248,6 @@ void Player_Sprinting(Player* player, float3 accl) {
 	}
 }
 
-
-
-
-
-
-#include <gui/DebugUI.h>
 float MaxWalkVelocity = 3.0f;
 const float MaxFallVelocity = -78.4f;
 const float GravityPlusFriction = 10.f;

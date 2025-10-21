@@ -7,6 +7,10 @@
 #include <gui/SpriteBatch.h>
 #include <gui/WorldSelect.h>
 #include <rendering/Camera.h>
+#include <gui/SplashText.h>
+#include <gui/GameSplash.h>
+#include <gui/Version.h>
+#include <gui/Panorama.h>
 #include <rendering/Clouds.h>
 #include <rendering/Cursor.h>
 #include <rendering/PolyGen.h>

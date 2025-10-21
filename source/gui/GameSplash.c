@@ -1,4 +1,5 @@
 #include <gui/GameSplash.h>
+#include <rendering/TextureMap.h>
 
 static C3D_Tex splashTex;
 //int duration = 500;

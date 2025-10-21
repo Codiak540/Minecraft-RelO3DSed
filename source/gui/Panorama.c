@@ -1,4 +1,5 @@
 #include "gui/Panorama.h"
+#include <rendering/TextureMap.h>
 
 static C3D_Tex panoramaTex[4];
 float panoPositions[6] = {

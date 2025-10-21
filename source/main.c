@@ -27,15 +27,9 @@
 
 #include <citro3d.h>
 
-
-
-
 static C3D_Tex splashTex;
 
-
-
-
-bool showDebugInfo = false;  // muss noch besser gemacht werden, vlt. über eine Options Struktur wo auch andere Einstellungen drinne sind
+bool showDebugInfo = true;  // muss noch besser gemacht werden, vlt. über eine Options Struktur wo auch andere Einstellungen drinne sind - TODO: Translate this
 
 void releaseWorld(ChunkWorker* chunkWorker, SaveManager* savemgr, World* world) {
 	for (int i = 0; i < CHUNKCACHE_SIZE; i++) {
@@ -70,7 +64,7 @@ int main() {
 	
 	
 	
-	srand(svcGetSystemTick);
+	srand((int) svcGetSystemTick);
  	
 	GameState gamestate = GameState_SelectWorld; //dont use splash yet. crashes console
 	

@@ -141,8 +141,11 @@ void Texture_MapInit(Texture_Map* map, const char** files, int num_files) {
 	const char* filename = files[filei];
 	int c = 0;
 	while (filename != NULL && c < (TEXTURE_MAPTILES * TEXTURE_MAPTILES) && filei < num_files) {
-		uint32_t *image, w, h;
-		uint32_t error = lodepng_decode32_file((uint8_t**)&image, &w, &h, filename);
+		unsigned char* image;
+        unsigned w, h;
+
+        uint32_t error = lodepng_decode32_file(&image, &w, &h, filename);
+
 		if (w == TEXTURE_TILESIZE && h == TEXTURE_TILESIZE && image != NULL && !error) {
 			for (int x = 0; x < TEXTURE_TILESIZE; x++) {
 				for (int y = 0; y < TEXTURE_TILESIZE; y++) {
