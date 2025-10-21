@@ -6,13 +6,13 @@
 void Texture_Load(C3D_Tex* result, char* filename);
 
 
-#define TEXTURE_MAPSIZE 256
-#define TEXTURE_TILESIZE 16
+//#define TEXTURE_MAPSIZE 256
+//#define TEXTURE_TILESIZE 16
 
-/*
+
 #define TEXTURE_MAPSIZE 128
 #define TEXTURE_TILESIZE 16
-*/
+
 
 #define TEXTURE_MAPTILES (TEXTURE_MAPSIZE / TEXTURE_TILESIZE)
 

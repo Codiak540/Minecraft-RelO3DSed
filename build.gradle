@@ -1,0 +1,54 @@
+plugins {
+    id 'base' // basic build lifecycle (clean, build, etc.)
+}
+
+// ---- CONFIG ----
+ext {
+    devkitProPath = System.getenv("DEVKITPRO") ?: "/opt/devkitpro"
+    devkitArmPath = System.getenv("DEVKITARM") ?: "$devkitProPath/devkitARM"
+    projectName = "My3DSGame"
+    outputDir = file("$buildDir/output")
+}
+
+tasks.register("make3ds", Exec) {
+    description = "Build the 3DS project using devkitARM makefile"
+    group = "build"
+
+    // ensure environment for devkitARM is set
+    environment "DEVKITPRO", devkitProPath
+    environment "DEVKITARM", devkitArmPath
+
+    workingDir = projectDir
+    commandLine "make"
+
+    // tell Gradle that Makefile output goes here
+    outputs.dir outputDir
+}
+
+tasks.register("clean3ds", Exec) {
+    description = "Clean the 3DS build artifacts"
+    group = "build"
+    workingDir = projectDir
+    commandLine "make", "clean"
+}
+
+tasks.register("run3dslink", Exec) {
+    description = "Send .3dsx to 3DS using 3dslink"
+    group = "run"
+
+    // requires 3dslink in PATH
+    dependsOn "make3ds"
+
+    doFirst {
+        def output3dsx = fileTree(dir: projectDir, include: "**/*.3dsx").singleFile
+        commandLine "3dslink", output3dsx
+    }
+}
+
+// Make Gradle’s default lifecycle depend on these
+tasks.named("build") {
+    dependsOn "make3ds"
+}
+tasks.named("clean") {
+    dependsOn "clean3ds"
+}
